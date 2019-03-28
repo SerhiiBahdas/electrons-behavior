@@ -6,6 +6,8 @@ This is a temporary script file.
 """
 import matplotlib.pyplot as plt
 from numpy import ones
+from mpl_toolkits.mplot3d import Axes3D
+
 a, b = 3e-6, 6e-6 # ширина і висота перерізу транзистора
 Nd = 2.1e18**(2/3) # концентрація донорів у перерізі
 Np = 200 # кількість квазічастинок
