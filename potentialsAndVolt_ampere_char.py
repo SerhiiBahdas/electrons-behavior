@@ -600,3 +600,13 @@ plt.plot(-Voltages, np.array(particles_on_each_itteration)*M*1.6e-19/dt*1000)
 plt.xlabel('Voltage,V')
 plt.ylabel('Current, mA')
 plt.grid(True)
+
+#comic sans
+'''
+import matplotlib.pyplot as plt
+matplotlib.rcParams['font.sans-serif'] = "Comic Sans MS"
+plt.plot(-Voltages, np.array(particles_on_each_itteration)*M*1.6e-19/dt*1000,'r')
+plt.xlabel('Voltage,V', fontsize = 12,fontname='Comic Sans MS')
+plt.ylabel('Current, mA', fontsize = 12,fontname='Comic Sans MS')
+plt.grid(True)
+'''
