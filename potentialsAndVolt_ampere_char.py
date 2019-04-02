@@ -62,7 +62,7 @@ def voltage(Nx,Ny,Udrain,Usourse,Ugate):
     V[0,5*width:]           = Udrain        # витік
     
     #допоки похибка не буде = 0.01%, продовжувати обчислення:
-    while(np.max(np.abs(np.divide(np.multiply(np.subtract(V,V_old),100),V_old))) > 0.1):
+    while(np.max(np.abs(np.divide(np.multiply(np.subtract(V,V_old),100),V_old))) > 1): #in ideal there should be 0.1 instead of 1
         
         #збережемо обраховану матрицю для порівняння з наступною:
         V_old = np.matrix(V)
