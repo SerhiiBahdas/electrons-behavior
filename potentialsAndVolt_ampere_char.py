@@ -576,7 +576,7 @@ for Ugate in Voltages:
     Ex,Ey = electricfield(V, Nx, Ny, h)
     
     #знайдемо швидкість і координати частинок на кожному кроці:
-    for k in range(1,Nt):
+    for k in range(1,5000):
         print(k)
         #знайдемо коодинати і швидкості всіх частинок через певний часовий крок k:
         x,y,vx,vy = speedcoordinate(x,y,vx,vy,k,dt,m,Ex,Ey)
