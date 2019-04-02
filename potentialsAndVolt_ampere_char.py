@@ -563,7 +563,7 @@ def diffusion_convert(dispersal, x, y, v, vx, vy, m, Np,k, Ny):
 
 
 #задамо напруги на затворі
-Voltages = np.array([2.0, 1.5,1.0,0.5,0.0])
+Voltages = np.array([2.0,1.0,0.0])
 #у вектор нижче запишемо скільки частинок перетнуло область стоку при кожній з напруг
 particles_on_each_itteration = np.zeros((len(Voltages)))
 voltagecounter = 0
@@ -576,7 +576,7 @@ for Ugate in Voltages:
     Ex,Ey = electricfield(V, Nx, Ny, h)
     
     #знайдемо швидкість і координати частинок на кожному кроці:
-    for k in range(1,Nt):
+    for k in range(1,Nt/2): # in ideal there should be Nt instead of Nt/2
         print(k)
         #знайдемо коодинати і швидкості всіх частинок через певний часовий крок k:
         x,y,vx,vy = speedcoordinate(x,y,vx,vy,k,dt,m,Ex,Ey)
